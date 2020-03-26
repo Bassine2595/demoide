@@ -1,0 +1,16 @@
+services:
+  testide:
+    build:
+      context: C:\Users\W-book\source\repos\TestIde\TestIde
+      dockerfile: TestIDe/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: testide
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\W-book\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\W-book\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

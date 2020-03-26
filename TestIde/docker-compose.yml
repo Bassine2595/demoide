@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testide:
+    image: ${DOCKER_REGISTRY-}testide
+    build:
+      context: .
+      dockerfile: TestIDe/Dockerfile
